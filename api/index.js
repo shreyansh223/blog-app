@@ -23,7 +23,7 @@ app.use('/uploads', express.static(__dirname + '/uploads'));
 mongoose.connect(
   'mongodb+srv://shreyanshgupta0440:Abcd1234@cluster0.swdgxxr.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
 );
-
+app.get('/', (req, res) => res.send('Express on Vercel'));
 app.post('/register', async (req, res) => {
   const { userName, password } = req.body;
 
