@@ -9,7 +9,7 @@ export default function LoginPage() {
   const { setUserInfo } = useContext(UserContext);
   async function login(ev) {
     ev.preventDefault();
-    const responce = await fetch('http://localhost:4000/login', {
+    const responce = await fetch('https://blog-app-servers.vercel.app/login', {
       method: 'POST',
       body: JSON.stringify({ userName, password }),
       headers: { 'Content-Type': 'application/json' },
