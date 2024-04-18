@@ -1,7 +1,6 @@
+import React from 'react';
 import ReactQuill from 'react-quill';
-
 import 'react-quill/dist/quill.snow.css';
-
 const modules = {
   toolbar: [
     [{ header: [1, 2, false] }],
@@ -31,10 +30,20 @@ const formats = [
 ];
 
 export default function Editor({ value, onChange }) {
+  // return (
+  //   <ReactQuill
+  //     modules={modules}
+  //     formats={formats}
+  //     value={value}
+  //     onChange={onChange}
+  //   />
+  // );
+
   return (
     <ReactQuill
       modules={modules}
       formats={formats}
+      theme="snow"
       value={value}
       onChange={onChange}
     />

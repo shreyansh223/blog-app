@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { useEffect, useState } from 'react';
 
 import { Navigate, useParams } from 'react-router-dom';
@@ -19,7 +21,7 @@ export default function EditPost() {
         setSummary(postInfo.summary);
       });
     });
-  }, []);
+  }, [id]);
 
   async function updatePost(ev) {
     ev.preventDefault();

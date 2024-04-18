@@ -31,7 +31,9 @@ function Header() {
         {userName && (
           <>
             <Link to="/create">Create New post</Link>
-            <a onClick={logout}>Logout</a>
+            <a href="/" onClick={logout}>
+              Logout
+            </a>
           </>
         )}
         {!userName && (

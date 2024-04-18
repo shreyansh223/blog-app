@@ -1,3 +1,4 @@
+import React from 'react';
 import { formatISO9075 } from 'date-fns';
 import { useEffect, useState, useContext } from 'react';
 import { useParams, Link } from 'react-router-dom';
@@ -13,12 +14,12 @@ export default function PostPage() {
         setPostInfo(postInfo);
       });
     });
-  }, []);
+  }, [id]);
   if (!postInfo) return '';
   return (
     <div className="post-page">
       <div className="image">
-        <img src={`http://localhost:4000/${postInfo.cover}`}></img>
+        <img src={`http://localhost:4000/${postInfo.cover}`} alt="img"></img>
       </div>
       <h1>{postInfo.title}</h1>
       <time>{formatISO9075(new Date(postInfo.createdAt))}</time>
